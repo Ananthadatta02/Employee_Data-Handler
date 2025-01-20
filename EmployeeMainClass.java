@@ -110,6 +110,28 @@ class CompareBasedOnSalary implements Comparator<Employee>
 	}
 }
 
+// Utility class to choose the collection type for storing employees
+class ListUtil<T> 
+{
+    public List<T> chooseListType() 
+    {
+        List<T> list = null;
+        Scanner s = new Scanner(System.in);
+        System.out.println("1. ArrayList");
+        System.out.println("2. LinkedList");
+        System.out.println("3. Vector");
+        System.out.println("Choose any One Option...");
+        int choice = s.nextInt();
+        if (choice == 1)
+            list = new ArrayList<T>();
+        else if (choice == 2)
+            list = new LinkedList<T>();
+        else if (choice == 3)
+            list = new Vector<T>();
+        return list;
+    }
+}
+
 public class EmployeeMainClass 
 {
 	public static void main(String[] args) 
