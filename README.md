@@ -1,47 +1,58 @@
 # Employee Management System
 
-This project is a simple Java-based Employee Management System. It demonstrates the use of collections, custom comparators, and sorting mechanisms to manage and organize employee data. 
+This project is a simple Java-based Employee Management System. It demonstrates the use of Java collections, custom comparators, and sorting mechanisms to manage and organize employee data. The system allows users to create multiple employee objects and sort them based on different criteria such as `ID`, `Name`, `Age`, and `Salary`.
 
 ## Features
-- Create and store multiple employee objects with attributes:
+- Create and store multiple employee objects with the following attributes:
   - `ID`
   - `Name`
   - `Age`
   - `Salary`
-- Sort employee objects based on the following criteria:
+- Sort employee objects based on user-selected criteria:
   - **ID**
   - **Name**
   - **Age**
   - **Salary**
-- Display the sorted employee list.
+- Display the sorted employee list based on the selected sorting criterion.
 
 ## Prerequisites
 - Java Development Kit (JDK) installed (version 8 or above).
 - Basic understanding of Java programming.
 
 ## Code Structure
+
 ### Classes
 1. **Employee**
-   - Represents an employee object with fields `id`, `name`, `age`, and `salary`.
+   - Represents an employee object with the fields `id`, `name`, `age`, and `salary`.
    - Includes getters, setters, and a `toString()` method for displaying employee details.
 
 2. **CompareBasedOnId**
-   - Implements `Comparator` to sort employees by `ID`.
+   - Implements `Comparator<Employee>` to sort employee objects by `ID`.
+   - The `compare()` method compares employee `id` attributes to determine the sorting order.
 
 3. **CompareBasedOnName**
-   - Implements `Comparator` to sort employees by `Name`.
+   - Implements `Comparator<Employee>` to sort employee objects by `Name`.
+   - The `compare()` method compares employee `name` attributes alphabetically using `compareTo()`.
 
 4. **CompareBasedOnAge**
-   - Implements `Comparator` to sort employees by `Age`.
+   - Implements `Comparator<Employee>` to sort employee objects by `Age`.
+   - The `compare()` method compares employee `age` attributes to determine the sorting order.
 
 5. **CompareBasedOnSalary**
-   - Implements `Comparator` to sort employees by `Salary`.
+   - Implements `Comparator<Employee>` to sort employee objects by `Salary`.
+   - The `compare()` method compares employee `salary` attributes to determine the sorting order.
 
-6. **EmployeeMainClass**
-   - Entry point of the application.
-   - Allows users to add employees to a list and sort them based on their preference.
+6. **ListUtil**
+   - A utility class to help the user choose between different types of collections such as `ArrayList`, `LinkedList`, or `Vector` to store employee objects.
+   - This class allows flexibility in selecting the collection type at runtime.
+
+7. **EmployeeMainClass**
+   - The entry point of the application.
+   - It provides the functionality to allow users to add employee objects to a list and select a sorting criterion (`ID`, `Name`, `Age`, or `Salary`) for sorting the employee list.
+   - The `Collections.sort()` method is used to apply the corresponding comparator for sorting.
 
 ## How to Run
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/EmployeeManagementSystem.git
