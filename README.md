@@ -67,7 +67,6 @@ This project is a simple **Employee Sorting Application** written in Java. It de
    - The `Collections.sort()` method is used to apply the corresponding comparator for sorting.
 
 ## How to Run
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/Ananthadatta02/Employee_Data-Handler.git
